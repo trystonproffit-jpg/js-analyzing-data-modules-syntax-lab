@@ -1,3 +1,18 @@
+const datajs = require('datejs');
+
+function combineUsers (...args){
+  const combinedObject = {
+    users: []  
+  };
+
+  for (const userArray of args){
+    combinedObject.users.push(...userArray);
+  }
+
+  combinedObject.merge_date = Date.today().toString("M/dd/yyyy")
+
+  return combinedObject;
+}
 
 
 
